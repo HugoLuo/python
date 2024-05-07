@@ -69,9 +69,10 @@ def variable_define():
     number1 = 2
     number2 = 7
     return number1*number2
-number1=1
-result=variable_define()
-print(result)
-print(number1)
+
+# number1=1
+# result=variable_define()
+# print(result)
+# print(number1)
 
 
