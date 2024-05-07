@@ -60,7 +60,6 @@ def global_variable_define():
     global number1
     number1=100
 
-
-global_variable_define()
-print(number1)
+# global_variable_define()
+# print(number1)
 
