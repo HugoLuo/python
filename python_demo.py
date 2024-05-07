@@ -34,5 +34,14 @@ def sum_list(mylist):
     for onenumber in mylist:
         result = result + onenumber
     print(result)
-sum_list([10,20,30])
+#sum_list([10,20,30])
 
+
+def checkage(age):
+    if age > 0 and age < 120:
+        return True
+    else:
+        return False
+# age=10
+# result =checkage(age)
+# print(result)
