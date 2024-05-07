@@ -63,3 +63,15 @@ def global_variable_define():
 # global_variable_define()
 # print(number1)
 
+
+def variable_define():
+    global number1
+    number1 = 2
+    number2 = 7
+    return number1*number2
+number1=1
+result=variable_define()
+print(result)
+print(number1)
+
+
