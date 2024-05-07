@@ -98,14 +98,16 @@ class Programer(People):
     def coding(self):
         print("程序员有独有的技能coding")
 
-#使用新的类，创建实例对象
-programer=Programer("Hugo",42)
+# #使用新的类，创建实例对象
+# programer=Programer("Hugo",42)
 
-#调用父类中的方法
-programer.print_info()
+# #调用父类中的方法
+# programer.print_info()
 
-#调用自己独有的方法
-programer.coding()
+# #调用自己独有的方法
+# programer.coding()
+
+
 
 
 
