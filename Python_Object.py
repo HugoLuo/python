@@ -93,19 +93,33 @@ class Animal:
 # class Programer(People):
 #     pass
 
-class Programer(People):
+class Programer(Zoo):
+
+    def __init__(self, name, type,age=1) -> None:
+        super().__init__(name, age)
+        #在新类中定义自己的新增属性
+        self.type=type
+
     #在新的类中，定义自己独有的方法
     def coding(self):
         print("程序员有独有的技能coding")
+    
+    #在新的类中，重写父类中的方法
+    def print_info(self):
+        print("the name is {0} age is {1} have new function {2} {3}".format(self.get_name(),self.get_age(),"coding",self.type))
 
 # #使用新的类，创建实例对象
 # programer=Programer("Hugo",42)
+# programer.print_info()
 
 # #调用父类中的方法
 # programer.print_info()
 
 # #调用自己独有的方法
 # programer.coding()
+
+programer=Programer("Hugo","Python",42)
+programer.print_info()
 
 
 
