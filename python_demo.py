@@ -45,3 +45,22 @@ def checkage(age):
 # age=10
 # result =checkage(age)
 # print(result)
+
+number1=20
+def local_variable_define():
+    number1=3
+    number2=7
+    return number1*number2
+
+# print(number1)
+# result=local_variable_define()
+# print(result)
+
+def global_variable_define():
+    global number1
+    number1=100
+
+
+global_variable_define()
+print(number1)
+
