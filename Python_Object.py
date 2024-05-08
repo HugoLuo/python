@@ -46,24 +46,24 @@ class People:
 
 #类提供方法去访问或设置类属性
 class Zoo:
-    def __init__(self,name,age=1) -> None:
-        self.__name=name
-        self.__age=age
+    def __init__(self,name,age=1):
+        self.name=name
+        self.age=age
     
     def set_name(self,name):
-        self.__name=name
+        self.name=name
     
     def set_age(self,age):
-        self.__age=age
+        self.age=age
     
     def get_name(self):
-        return self.__name
+        return self.name
     
     def get_age(self):
-        return self.__age
+        return self.age
     
     def print_info(self):
-        print("the zoo name is {0} age is {1}".format(self.__name,self.__age))
+        print("the zoo name is {0} age is {1}".format(self.name,self.age))
 
 # dog=Zoo('Dog',3)
 # dog.print_info()
@@ -95,9 +95,8 @@ class Animal:
 
 class Programer(Zoo):
 
-    def __init__(self, name, type,age=1) -> None:
+    def __init__(self, name, type,age=1):
         super().__init__(name, age)
-        #在新类中定义自己的新增属性
         self.type=type
 
     #在新的类中，定义自己独有的方法
@@ -122,20 +121,28 @@ class Programer(Zoo):
 # programer.print_info()
 
 
-#多态的定义
-#让同一方法，传入不同的对象，进而执行不同的代码。
-def my_print(obj):
-    obj.print_info()
-#多态的使用：
-#多态1
-zoo=Zoo('pig',1)
-my_print(zoo)
-#多态2
-programer=Programer("hugo",42)
-my_print(programer)
+# #多态的定义
+# #让同一方法，传入不同的对象，进而执行不同的代码。
+# def my_print(obj):
+#     obj.print_info()
+# #多态的使用：
+# #多态1
+# zoo=Zoo('pig',1)
+# my_print(zoo)
+# #多态2
+# programer=Programer("hugo",42)
+# my_print(programer)
+
+# p1=Programer("Jam","C++",45)
+# p1.print_info()
 
 
 
+def HaveFun():
+    if __name__ == '__main__':
+        print("I am in my domain,my name is {0}".format(__name__))
+    else:
+        print("Someone else calls me,my name is {0}".format(__name__))
 
-
+HaveFun()
 
