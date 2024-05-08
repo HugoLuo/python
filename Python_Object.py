@@ -118,10 +118,21 @@ class Programer(Zoo):
 # #调用自己独有的方法
 # programer.coding()
 
-programer=Programer("Hugo","Python",42)
-programer.print_info()
+# programer=Programer("Hugo","Python",42)
+# programer.print_info()
 
 
+#多态的定义
+#让同一方法，传入不同的对象，进而执行不同的代码。
+def my_print(obj):
+    obj.print_info()
+#多态的使用：
+#多态1
+zoo=Zoo('pig',1)
+my_print(zoo)
+#多态2
+programer=Programer("hugo",42)
+my_print(programer)
 
 
 
