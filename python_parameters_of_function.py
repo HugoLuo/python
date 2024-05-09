@@ -10,6 +10,14 @@ print(sys.argv[2])  #获取python文件的第二个参数
 print(sys.argv[1:])  #获取所有参数的列表
 print(len(sys.argv)-1) #获取参数的个数
 
+pramlen=len(sys.argv)-1
+
+if pramlen != 3:
+    print("the number of prameters DO NOT match the request,exit")
+    sys.exit(1)
+else:
+    print("the number of prameters match the request")
+
 # 当执行上面程序时，向该程序传递参数的操作如下：
 # python3 mypram.py parameter1 parameter2
 
