@@ -58,4 +58,5 @@ def string_index():
     string1="Hello world!"
     a = string1.index("o",5)
     print(a)
-string_index()
+# string_index()
+

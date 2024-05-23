@@ -20,14 +20,9 @@ import subprocess
 # response_content=subprocess.getoutput('pwd')
 
 response_content=subprocess.getoutput('ls -ltr')
-# print("response content is {0}".format(response_content))
+print("response content is {0}".format(response_content))
 
 #能用 python实现的尽量不调用shell脚本
 
 
 
-for i in range(3):
-    for j in range(i,3):
-        if j %2 == 0:
-            continue
-    print(i,end=" ")
