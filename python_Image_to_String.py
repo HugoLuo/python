@@ -1,3 +1,5 @@
+#depending : pip install pillow 
+#            pip install pytesseract
 from PIL import Image
 import pytesseract
 
