@@ -60,3 +60,34 @@ def string_index():
     print(a)
 # string_index()
 
+def func_list1():
+    list1 = [[1,2,3],[4,5,6],[7,8,9]]
+    # items = []
+    # for item in list1:
+    #     for i in item:
+    #         items.append(i)
+    # OR
+    items=[i for item in list1 for i in item]
+
+    print(items)
+# func_list1()
+
+def func_list2(lists,items=None):
+    if items is None:
+        items = []
+    for item in lists:
+        if type(item) != list:
+            items.append(item)
+        else:
+            func_list2(item,items)
+    return items
+
+# res = func_list2([[1,2,3],[4,5],[[7,8,9]]])
+# print(res)
+
+def func_list3():
+    lists = [True,False,0,None,1]
+    result = lists[-1] or lists[0] and lists[2]
+    print(result)
+
+func_list3()
