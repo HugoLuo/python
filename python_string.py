@@ -1,5 +1,8 @@
 str1="JustdoIt"
 
+result0=str1[0:3]
+print(result0)
+
 #将字符串变成全部变成小写
 result1=str1.lower()
 print(result1)
