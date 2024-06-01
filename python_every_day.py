@@ -87,7 +87,9 @@ def func_list2(lists,items=None):
 
 def func_list3():
     lists = [True,False,0,None,1]
-    result = lists[-1] or lists[0] and lists[2]
+    result = lists[-1] or lists[0] and lists[2]  #and的优先级高于or, 不是从左到右来进行逻辑运算
+    #  上面分成左右两部分： lists[-1]  和 （lists[0] and lists[2]）
+    # 左边是1 , 而且后面是or ,就不管右手部分是什么逻辑运算结果，最终的结果就是1    
     print(result)
 
-func_list3()
+# func_list3()
