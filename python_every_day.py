@@ -93,3 +93,12 @@ def func_list3():
     print(result)
 
 # func_list3()
+
+import time
+def progress():
+    for i in range(11):
+        progress = "#"*i + "-"*(10-i)
+        print(f"r\033[1:32m{progress}",end="")
+        time.sleep(0.5)
+
+progress()
