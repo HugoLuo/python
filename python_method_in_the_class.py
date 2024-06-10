@@ -11,6 +11,8 @@ class Person:
     @staticmethod
     def static_method():
         print("this one static method in class")
+    
+    
 
 #对象访问类中的上面的三种方法
 print("Object access the methods")
