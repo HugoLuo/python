@@ -50,4 +50,26 @@ def max_number():
         else:
             print(num1,"=",num2)
 
-max_number()
+# max_number()
+
+def guess_input():
+    num=12345
+    if num >= 10000:
+        print(">5")
+    elif num >= 1000:
+        print(" >4")
+    elif num >=100:
+        print(">3")
+    elif num >10:
+        print(" > 2")
+    else:
+        print(" >1")
+
+
+from collections import namedtuple
+
+Student = namedtuple('S','name,age')
+s1 = Student("hugo",20)
+print(s1)
+
+
