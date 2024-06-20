@@ -66,10 +66,6 @@ def guess_input():
         print(" >1")
 
 
-from collections import namedtuple
 
-Student = namedtuple('S','name,age')
-s1 = Student("hugo",20)
-print(s1)
 
 

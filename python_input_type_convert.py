@@ -24,6 +24,3 @@ print(type(number))
 str_number=str(number)
 print(type(str_number))
 
-import sys
-x = []
-print(sys.getrefcount(x))
