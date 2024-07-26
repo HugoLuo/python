@@ -1,53 +1,54 @@
-def decorator(func):            #定义装饰器
-    print("start decorator")
-    def wrapper(*args,**kwargs):    #*args 表示接受可变参数   **kwargs 则表示接受接受包含关键字的参数。
-        print("start wrapper")
-        func(*args,**kwargs)
-        print("end wrapper")
-    print("decotrator1 will end")
-    return wrapper    # 返回给被装饰的方法函数
+import time
 
-@decorator   #使用装饰器，对方法函数f1 进行包装。
-def f1(x):
-    print("this is one function1 , initual , nothing")
+islogin = False #默认是没有登陆的
 
-@decorator
-def f2(name,age):
-    print("this is one function2")
+#定义登陆函数
+def login():
+    username=input("Username is: ")
+    password=input("Password is: ")
+    if username == 'admin' and password == '123':
+        return True
+    else:
+        return False
 
-@decorator
-def f3(students,clazz='203'):
-    print("{} 班有以下的学生".format(clazz))
-    for student in students:
-        print(student)
+#定义一个装饰器，
+def login_required(func):
+    def wrapper(*args,**wkargs):
+        global islogin 
+        if islogin:
+            func(*args,**wkargs)
+        else:
+            print("still no login,login first pls")
+            #先去登陆吧。  
+            # result = login()
+            islogin = login()
+            print("result is", islogin)
+    return wrapper
 
+#调用装饰器对支付函数进行功能(支付前看是否已经登陆)扩充
+@login_required
+def pay(money):
+    print("paying ,free is {}".format(money))
+    print("paying ......")
+    time.sleep(2)
+    print("finished pay ",money)
 
+# print("the first time to pay ")
+# pay(100)
+# print("the second time to pay\n ************************")
+# pay(200)
 
-
-# f1(12)
-
-# f2('Any',18)
-
-# students=['Tom',"Jack","Hugo","Albert"]
-# f3(students,clazz='9527')  #指定第二个参数
-# f3(students)    #第二个参数使用默认值
-
-
-def decorator2(func):
-    print("start decorator2")
-    def wrapper2(*args,**kwargs):
-        print("start wrapper2")
-        func(*args,**kwargs)
-        print("end wrapper2")
-    print("decotrator2 will end")
-    return wrapper2
-
-#对first_fun进行多层包装，decorator包装装饰完后的结果作为参数传给decorator2再进行包装装饰，以此类推。
-#                       执行次序则是：越接近方法函数的装饰器越早被执行。
-@decorator2
-@decorator
-def first_fun():
-    print("this is first func")
+# print("the third time pay \n ************************")
+# pay(300)
 
 
-first_fun()
+def about_memory():
+    name1="Hugo"
+    name2=name1
+    name2="Boss"
+    print(name1,id(name1))
+    print(name1,id(name2))
+
+about_memory()
+
+help(input)
