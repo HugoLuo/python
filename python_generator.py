@@ -95,8 +95,8 @@ import sys
 
 class Person:
 
-    def __new__():
-        print("method __new__() be call")
+    # def __new__():
+    #     print("method __new__() be call")
 
     # def __init__():
     #     print("method __init__() be called")

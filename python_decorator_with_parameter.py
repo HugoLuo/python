@@ -1,7 +1,7 @@
 #定义可以传参数的装饰器
-def outer(p1):
-    def decorator(func):
-        def wrapper(*args,**kwargs):
+def outer(p1):     #第一层，负责接受装饰器的参数
+    def decorator(func):   #第二次 ，负责接受将要对其进行装饰的函数
+        def wrapper(*args,**kwargs):  #第三层，负责接受装饰的函数的参数
             func(*args,**kwargs)
             print("传入装饰器的参数是 {}".format(p1))
         

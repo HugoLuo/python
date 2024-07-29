@@ -48,6 +48,8 @@ def about_memory():
     name2="Boss"
     print(name1,id(name1))
     print(name1,id(name2))
+    name = input("Enter UserName:")
+    print(name)
 
 about_memory()
 
