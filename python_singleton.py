@@ -45,26 +45,49 @@
 
 
 
-class Singleton:
-    __instance = None
-    name = "Hugo"
+# class Singleton:
+#     __instance = None
+#     name = "Hugo"
 
-    # def __init__(self,num) -> None:
-    #     self.__num=num
+#     # def __init__(self,num) -> None:
+#     #     self.__num=num
+
+#     def __new__(cls):
+#         if cls.__instance is None:
+#             cls.__instance = object.__new__(cls)
+#         return cls.__instance
+    
+#     def show(self,num):
+#         print("------->",Singleton.name,num)
+
+# s1 = Singleton()
+# s2 = Singleton()
+# print(s1)
+# print(s2)
+
+# s1.show(20)
+# s2.show(100)
+# # s1.show
+
+
+class Singleton:
+    
+    __instance = None
+    name ="Hugo"
 
     def __new__(cls):
-        if cls.__instance is None:
+        if cls.__instance == None:
             cls.__instance = object.__new__(cls)
         return cls.__instance
     
     def show(self,num):
-        print("------->",Singleton.name,num)
+        print("name is {},and number is {}".format(Singleton.name,num))
 
 s1 = Singleton()
 s2 = Singleton()
-print(s1)
-print(s2)
+print("s1 object address is ",s1)
+print("s2 object address is ",s2)
 
-s1.show(20)
-s2.show(100)
-# s1.show
+s1.show(100)
+s2.show(200)
+
