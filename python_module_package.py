@@ -1,6 +1,16 @@
-# print(">>>>>>>>>>>>>>>>")
-# print(__name__)
-# if __name__ == "__main__":
-#     print("As master running")
+__all__ = [VAR1,OneClass]
 
-import python_module_import
+print(">>>>>>>>>>>>>>>>")
+print(__name__)
+if __name__ == "__main__":
+    print("As master running")
+
+
+VAR1=1000
+
+def onefunc():
+    print("there are one func be invoke")
+
+class OneClass:
+    def funcInclass(self):
+        print("func In class be invoke")
