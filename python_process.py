@@ -190,10 +190,16 @@ class MyProcess(Process):
             n += 1
 
 if __name__ == "__main__":
-    p1 = MyProcess('小明',10)
-    p1.start()
+    # p1 = MyProcess('小明',10)
+    # p1.start()
 
-    p2 = MyProcess('小红')
-    p2.start()
+    # p2 = MyProcess('小红')
+    # p2.start()
+    pass
 
+
+from multiprocessing import Process
+from multiprocessing import Lock
+from multiprocessing import Queue
+from threading import Thread
     
